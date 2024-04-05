@@ -14,40 +14,7 @@ public class CreditCardFraud {
     public CreditCardFraud(String filename) throws IOException {
         this.data = readData(filename);
     }
-
-    /*
-
-    private List<double[]> readData(String filename) throws IOException {
-        List<double[]> records = new ArrayList<>();
-        try (BufferedReader in = new BufferedReader(new FileReader(filename))) {
-            String line;
-            boolean headerSkipped = false;
-            while ((line = in.readLine()) != null) {
-                if (!headerSkipped) {
-                    headerSkipped = true;
-                    continue; // Skip the header line
-                }
-
-                //System.out.println("Line: " + line); // Print the line
-                String[] parts = line.split(",");
-                //System.out.println("Parts:");
-                for (String part : parts) {
-                    System.out.println("  " + part);
-                }
-                double[] values = new double[parts.length];
-                for (int i = 0; i < parts.length - 1; i++) { // Exclude the last part (Class)
-                    values[i] = Double.parseDouble(parts[i]);
-                }
-                // Parse the last part (Class) as an integer
-                int classValue = Integer.parseInt(parts[parts.length - 1].replaceAll("\"", ""));
-                values[parts.length - 1] = classValue;
-                records.add(values);
-            }
-        }
-        return records;
-    }
-
-     */
+    
 
     private List<double[]> readData(String filename) throws IOException {
         List<double[]> records = new ArrayList<>();

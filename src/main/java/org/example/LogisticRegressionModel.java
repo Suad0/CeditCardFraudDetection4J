@@ -64,5 +64,9 @@ public class LogisticRegressionModel {
         return predictProbability(augmentedX_test);
     }
 
+    public static void main(String[] args) {
+
+    }
+
 
 }
